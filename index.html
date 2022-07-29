@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investasi</title>
+    <style type="text/css">
+      body {
+        background-color: aqua;
+      }
+      .box {
+        max-width: 450px;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 100px auto;
+        background-color: rgb(122, 5, 177);
+      }
+
+      .input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      .btn {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        background-color: rgb(235, 231, 14);
+        padding: 10px;
+      }
+      .btn:hover {
+        background-color: rgb(62, 180, 8);
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+  </head>
+  <body>
+    <div class="box">
+      <label for="">Total Investasi</label>
+      <input type="text" id="total" class="input" />
+      <label for="">Bunga(Persentasi)</label>
+      <input type="text" id="bunga" class="input" />
+      <label for="">Bulan/Tahun</label>
+      <select class="input" name="" id="">
+        <option value="">Bulan</option>
+        <option value="">Tahun</option>
+      </select>
+      <label for="">Durasi</label>
+      <input type="text" id="durasi" class="input" />
+      <button class="btn" onclick="a()">Hasil</button>
+      <label id="hasil">...</label>
+    </div>
+    <script type="text/javascript">
+      function a() {
+        var total = parseInt(document.getElementById("total").value);
+        var bunga = parseInt(document.getElementById("bunga").value);
+        var durasi = parseInt(document.getElementById("durasi").value);
+        var persen = (total * bunga) / 100;
+        var hasil = total + persen * durasi;
+        document.getElementById("hasil").innerHTML = hasil;
+      }
+    </script>
+  </body>
+</html>
